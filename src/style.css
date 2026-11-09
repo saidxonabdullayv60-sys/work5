@@ -1,0 +1,230 @@
+/* ============================================
+   ShopHub — global ranglar va reset
+   ============================================ */
+:root {
+  --purple: #5842E7;
+  --purple-dark: #4735C4;
+  --text-dark: #1A1A1A;
+  --text-muted: #6B7280;
+  --border-color: #E5E7EB;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #F3F4F6;
+}
+
+/* ============================================
+   Login sahifasi — tashqi konteyner (markazlashtirish uchun)
+   ============================================ */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(88, 66, 231, 0.15);
+}
+
+/* ============================================
+   Chap panel (binafsha)
+   ============================================ */
+.login-left {
+  flex: 1;
+  background: var(--purple);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 15px;
+  opacity: 0.85;
+  max-width: 220px;
+  line-height: 1.5;
+}
+
+.illustration {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ============================================
+   O'ng panel (forma)
+   ============================================ */
+.login-right {
+  flex: 1;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-right h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 28px;
+}
+
+.field-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+}
+
+.phone-input .flag {
+  font-size: 18px;
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: var(--purple);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--purple-dark);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.divider span {
+  padding: 0 12px;
+}
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.15s ease;
+}
+
+.btn-outline:hover {
+  background: #F9FAFB;
+}
+
+.signup-line {
+  margin-top: auto;
+  padding-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.signup-line a {
+  color: var(--purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ============================================
+   Responsive: Tablet va Mobile uchun moslashuv
+   ============================================ */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    max-width: 420px;
+  }
+
+  .login-left {
+    padding: 28px;
+  }
+
+  .illustration {
+    max-width: 200px;
+    margin: 20px auto 0;
+  }
+}
